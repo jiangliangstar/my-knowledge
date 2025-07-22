@@ -1,0 +1,36 @@
+site_name: My Knowledge Base  # 网站标题
+theme:
+  name: gitbook  # 使用 GitBook 主题
+  features:
+    - navigation.top  # 顶部导航栏
+    - search.suggest  # 搜索建议
+    - toc.integrate   # 集成目录
+
+# 导航配置（示例）
+nav:
+  - 首页: index.md
+  # 固定核心分类
+  - Java核心知识:
+      - 集合框架: knowledge/java/collections.md
+      - 并发编程: knowledge/java/concurrency.md
+      - JVM原理: knowledge/java/jvm.md
+  # 自动生成部分
+  - 算法题库: 
+      - !include docs/algorithms/_nav.yml
+  - 工作记录:
+      - !include work/_nav.yml
+
+# 插件
+plugins:
+  - markdownextradata  # 支持元数据
+  - jekyll-github-metadata
+  - search
+  - literate-nav:
+      nav_file: SUMMARY.md  # 使用 Markdown 文件管理导航
+extra_css:
+  - assets/css/custom.css
+# 排除 Obsidian 系统文件
+exclude_docs: |
+  .obsidian/**
+  .trash/**
+  *.canvas
