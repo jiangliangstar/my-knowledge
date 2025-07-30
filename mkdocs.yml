@@ -1,6 +1,6 @@
-site_name: My Knowledge Base  # 网站标题
+site_name: 知识库  # 网站标题
 theme:
-  name: gitbook  # 使用 GitBook 主题
+  name: material  # 使用 GitBook 主题
   features:
     - navigation.top  # 顶部导航栏
     - search.suggest  # 搜索建议
@@ -11,14 +11,16 @@ nav:
   - 首页: index.md
   # 固定核心分类
   - Java核心知识:
-      - 集合框架: knowledge/java/collections.md
-      - 并发编程: knowledge/java/concurrency.md
-      - JVM原理: knowledge/java/jvm.md
-  # 自动生成部分
-  - 算法题库: 
-      - !include docs/algorithms/_nav.yml
-  - 工作记录:
-      - !include work/_nav.yml
+      - 算法题库: docs/algorithms/index.md
+      - Java基础: docs/integrate/index.md
+      - 算法讲解: docs/knowledge/index.md
+
+
+  # # 自动生成部分
+  # - 算法题库: 
+  #     - !include docs/algorithms/_nav.yml
+  # - 工作记录:
+  #     - !include work/_nav.yml
 
 # 插件
 plugins:
